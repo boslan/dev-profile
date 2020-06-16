@@ -71,6 +71,7 @@ export class HeaderComponent extends LitElement {
                 align-items: center;
                 justify-content: center;
                 transition: transform ease 300ms;
+                background: var(--light-100);
             }
 
             .photo-image {
