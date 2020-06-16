@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "dev-profile-6aa82"
+  },
+  "targets": {
+    "dev-profile-6aa82": {
+      "hosting": {
+        "poslovsky": [
+          "poslovsky"
+        ]
+      }
+    }
   }
 }
