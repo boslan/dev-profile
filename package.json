@@ -10,6 +10,7 @@
   "author": "Bogdan Poslovsky",
   "license": "ISC",
   "dependencies": {
+    "firebase-tools": "^8.4.2",
     "lit-element": "^2.3.1",
     "lit-html": "^1.2.1"
   },
