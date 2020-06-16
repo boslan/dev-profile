@@ -1,0 +1,30 @@
+html,
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--primary);
+    background: var(--background);
+}
+:root {
+    font-family: Ubuntu Mono, monospace;
+
+    --dark-0: hsl(0, 0%, 0%);
+    --dark-20: hsl(0, 0%, 20%);
+    --base: hsl(0, 0%, 60%);
+    --light-80: hsl(0, 0%, 80%);
+    --light-100: hsl(0, 0%, 100%);
+    --ocean-base: hsl(235, 75%, 60%);
+
+    --primary: var(--dark-20);
+    --background: var(--light-100);
+    --accent: var(--ocean-base);
+}
+:root.dark {
+    --primary: var(--light-80);
+    --background: var(--dark-0);
+}

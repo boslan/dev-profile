@@ -1,0 +1,10 @@
+{
+  "/": {
+    "src/app.js": {
+      "crossorigin": "anonymous",
+      "type": "script",
+      "weight": 1
+    }
+  }
+}
+
