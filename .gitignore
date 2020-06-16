@@ -1,8 +1,11 @@
 # Logs
 *.log
 npm-debug.log*
+firebase-debug.log*
 
 dist/
+
+.firebase/
 
 node_modules/
 
