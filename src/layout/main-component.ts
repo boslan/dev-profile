@@ -67,11 +67,6 @@ export class MainComponent extends LitElement {
         navigate(name);
     }
 
-    protected setTab(tab: TAB): void {
-        this.activeTab = tab;
-        this.showHelp = false;
-    }
-
     protected isActiveTab(tab: TAB): boolean {
         return this.activeTab === tab;
     }
@@ -108,9 +103,9 @@ export class MainComponent extends LitElement {
     private keysListener: (event: KeyboardEvent) => void = ({ code }: KeyboardEvent) => {
         const tabIndex: number = TABS_LIST.indexOf(this.activeTab);
         if (code === 'ArrowRight' && tabIndex + 1 < TABS_LIST.length) {
-            this.setTab(TABS_LIST[tabIndex + 1]);
+            this.changeTab(TABS_LIST[tabIndex + 1]);
         } else if (code === 'ArrowLeft' && tabIndex > 0) {
-            this.setTab(TABS_LIST[tabIndex - 1]);
+            this.changeTab(TABS_LIST[tabIndex - 1]);
         }
     };
 }

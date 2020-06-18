@@ -1,5 +1,6 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
 import { animations } from '../components/animations-style';
+import { listStyle } from '../components/list-style';
 
 @customElement('experience-component')
 export class ExperienceComponent extends LitElement {
@@ -28,21 +29,9 @@ export class ExperienceComponent extends LitElement {
                 .total {
                     margin-bottom: 5px;
                 }
-
-                ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                }
-
-                li:before {
-                    content: '[';
-                }
-                li:after {
-                    content: ']';
-                }
             `,
             animations,
+            listStyle,
         ];
     }
 }

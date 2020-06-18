@@ -21,7 +21,7 @@ export class RootComponent extends LitElement {
             :host {
                 display: flex;
                 flex-flow: column;
-                padding: 10px 10px 0;
+                padding: 15px 15px 0;
                 color: var(--primary);
                 background: var(--background);
             }

@@ -1,5 +1,6 @@
 import { css, CSSResult, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
 import { animations } from '../components/animations-style';
+import { listStyle } from '../components/list-style';
 
 @customElement('skills-component')
 export class SkillsComponent extends LitElement {
@@ -24,21 +25,9 @@ export class SkillsComponent extends LitElement {
                     justify-content: center;
                     animation: show ease 300ms;
                 }
-
-                ul {
-                    list-style: none;
-                    margin: 0;
-                    padding: 0;
-                }
-
-                li:before {
-                    content: '[';
-                }
-                li:after {
-                    content: ']';
-                }
             `,
             animations,
+            listStyle,
         ];
     }
 }
