@@ -107,5 +107,6 @@ export class MainComponent extends LitElement {
         } else if (code === 'ArrowLeft' && tabIndex > 0) {
             this.changeTab(TABS_LIST[tabIndex - 1]);
         }
+        this.showHelp = false;
     };
 }
