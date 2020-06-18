@@ -25,6 +25,7 @@ export class SkillsComponent extends LitElement {
                     <li>React</li>
                     <li>Redux</li>
                     <li>RxJS</li>
+                    <li>Aurelia</li>
                 </ul>
             </article>
         `;
