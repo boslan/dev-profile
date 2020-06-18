@@ -21,7 +21,7 @@ export class RootComponent extends LitElement {
             :host {
                 display: flex;
                 flex-flow: column;
-                padding: 15px 15px 0;
+                padding: 0 15px;
                 color: var(--primary);
                 background: var(--background);
             }
@@ -31,15 +31,23 @@ export class RootComponent extends LitElement {
                 justify-content: center;
             }
 
+            header-component {
+                margin: 20px 0;
+            }
+
             header-component,
             main-component {
                 flex: 1;
             }
-            main-component {
-                margin: 20px 0 0;
-            }
 
             @media (max-width: 564px) {
+                header-component,
+                main-component {
+                    flex: none;
+                }
+                header-component {
+                    margin: 0 0 20px;
+                }
                 main-component {
                     align-items: center;
                 }

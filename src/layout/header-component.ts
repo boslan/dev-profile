@@ -62,7 +62,7 @@ export class HeaderComponent extends LitElement {
             }
 
             .photo-container {
-                margin: 0 40px;
+                margin: 20px 40px;
                 height: 104px;
                 width: 104px;
                 border-radius: 50%;
@@ -143,10 +143,6 @@ export class HeaderComponent extends LitElement {
             @media (max-width: 564px) {
                 .header {
                     justify-content: center;
-                }
-
-                .photo-container {
-                    margin-bottom: 20px;
                 }
 
                 .profile {

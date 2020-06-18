@@ -5,15 +5,29 @@ import { listStyle } from '../components/list-style';
 @customElement('skills-component')
 export class SkillsComponent extends LitElement {
     protected render(): TemplateResult {
-        return html`<div>
-            <ul>
-                <li>ECMAScript</li>
-                <li>TypeScript</li>
-                <li>WebComponents</li>
-                <li>CSS</li>
-                <li>HTML</li>
-            </ul>
-        </div>`;
+        return html`
+            <article>
+                <h4>Base</h4>
+                <ul>
+                    <li>JS/CSS/HTML</li>
+                    <li>WebComponents</li>
+                    <li>Node.js</li>
+                    <li>NoSQL/SQL databases</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4>Frameworks/Libs</h4>
+                <ul>
+                    <li>AngularJS/Angular</li>
+                    <li>LitElement</li>
+                    <li>Polymer</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>RxJS</li>
+                </ul>
+            </article>
+        `;
     }
 
     static get styles(): CSSResultArray {
@@ -22,8 +36,12 @@ export class SkillsComponent extends LitElement {
             css`
                 :host {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: center;
                     animation: show ease 300ms;
+                }
+                article {
+                    margin: 0 5px;
                 }
             `,
             animations,
