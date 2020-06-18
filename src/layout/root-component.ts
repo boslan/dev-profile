@@ -29,6 +29,10 @@ export class RootComponent extends LitElement {
             footer {
                 display: flex;
                 justify-content: center;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
             }
 
             header-component {
