@@ -7,7 +7,7 @@ export class HeaderComponent extends LitElement {
         return html` <header class="header">
             <div class="profile">
                 <figure class="photo-container">
-                    <img class="photo-image" src="/images/self.jpg" alt="Photo" />
+                    <img class="photo-image" src="/images/photo.jpg" alt="Photo" />
                 </figure>
                 <div class="about">
                     <div class="position">Frontend Software Engineer</div>

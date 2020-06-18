@@ -22,7 +22,7 @@ module.exports = {
     },
     plugins: [
         new CopyPlugin({
-            patterns: ['images/**', 'style.css', 'manifest.json'],
+            patterns: ['images/**', 'style.css', 'manifest.json', { from: 'images/photo.jpg', to: 'og.jpg' }],
         }),
         new HtmlWebpackPlugin({
             chunksSortMode: 'none',

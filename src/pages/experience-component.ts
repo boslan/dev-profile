@@ -1,5 +1,5 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
-import { animations } from '../core/animations-style';
+import { animations } from '../components/animations-style';
 
 @customElement('experience-component')
 export class ExperienceComponent extends LitElement {

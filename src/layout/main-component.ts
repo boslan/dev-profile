@@ -1,9 +1,10 @@
 import { LitElement, html, TemplateResult, CSSResult, css, customElement, property } from 'lit-element';
-import './core/tab-component';
-import './core/tablist-component';
-import './pages/about-component';
-import './pages/skills-component';
-import './pages/experience-component';
+import '../components/tab-component';
+import '../components/tablist-component';
+import '../pages/about-component';
+import '../pages/skills-component';
+import '../pages/experience-component';
+import { installRouter, navigate } from '../core/router';
 
 enum TAB {
     about = 'about',
@@ -20,6 +21,14 @@ export class MainComponent extends LitElement {
     connectedCallback() {
         super.connectedCallback();
         document.addEventListener('keydown', this.keysListener);
+        installRouter((location) => {
+            const tab = location.pathname.slice(1) as TAB;
+            if (TABS_LIST.includes(tab)) {
+                this.activeTab = tab;
+            } else {
+                this.changeTab(TAB.about);
+            }
+        });
     }
 
     disconnectedCallback() {
@@ -55,6 +64,7 @@ export class MainComponent extends LitElement {
 
     protected changeTab(name: string): void {
         this.activeTab = name as TAB;
+        navigate(name);
     }
 
     protected setTab(tab: TAB): void {
@@ -74,7 +84,7 @@ export class MainComponent extends LitElement {
                 flex-flow: column;
                 position: relative;
             }
-            
+
             .content {
                 padding: 10px 0;
                 font-size: 18px;

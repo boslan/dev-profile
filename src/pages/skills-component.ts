@@ -1,5 +1,5 @@
 import { css, CSSResult, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
-import { animations } from '../core/animations-style';
+import { animations } from '../components/animations-style';
 
 @customElement('skills-component')
 export class SkillsComponent extends LitElement {

@@ -1,6 +1,6 @@
 {
   "/": {
-    "src/app.js": {
+    "src/main.js": {
       "crossorigin": "anonymous",
       "type": "script",
       "weight": 1

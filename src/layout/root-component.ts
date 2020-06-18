@@ -1,7 +1,7 @@
 import { customElement, LitElement, TemplateResult, html, CSSResult, css } from 'lit-element';
 import './header-component';
 import './main-component';
-import './core/theme-switch-component';
+import '../components/theme-switch-component';
 
 @customElement('root-component')
 export class RootComponent extends LitElement {
