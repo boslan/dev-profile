@@ -96,6 +96,12 @@ export class MainComponent extends LitElement {
                 color: var(--base);
                 animation: ease show 300ms;
             }
+
+            @media (max-width: 564px) {
+                .help {
+                    display: none;
+                }
+            }
         `;
     }
 

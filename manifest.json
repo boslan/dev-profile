@@ -1,17 +1,37 @@
 {
     "name": "Bogdan Poslovsky",
-    "short_name": "BP Dev",
+    "short_name": "BP",
     "display": "standalone",
     "description": "Software Engineer Bogdan Poslovsky",
     "orientation": "portrait",
     "start_url": "/",
     "theme_color": "#fff",
     "background_color": "#fff",
-    "icons": {
-        "48": "/images/app.svg",
-        "96": "/images/app.svg",
-        "144": "/images/app.svg",
-        "192": "/images/app.svg",
-        "512": "/images/app.svg"
-    }
+    "icons": [
+        {
+            "src": "/images/app.webp",
+            "sizes": "48x48",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/app.webp",
+            "sizes": "92x92",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/app.webp",
+            "sizes": "144x144",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/app.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        },
+        {
+            "src": "/images/app.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        }
+    ]
 }
