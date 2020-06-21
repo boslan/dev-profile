@@ -9,9 +9,9 @@ export class RootComponent extends LitElement {
         return html`
             <header-component role="header"></header-component>
             <main-component role="main"></main-component>
-            <footer>
+            <aside class="toolbar">
                 <theme-switch></theme-switch>
-            </footer>
+            </aside>
         `;
     }
 
@@ -20,18 +20,19 @@ export class RootComponent extends LitElement {
         return css`
             :host {
                 display: flex;
+                flex-basis: 100%;
                 flex-flow: column;
                 padding: 0 15px;
                 color: var(--primary);
                 background: var(--background);
+                position: relative;
             }
 
-            footer {
+            .toolbar {
                 display: flex;
                 justify-content: center;
                 position: absolute;
-                bottom: 0;
-                left: 0;
+                top: 0;
                 right: 0;
             }
 
@@ -44,6 +45,10 @@ export class RootComponent extends LitElement {
                 flex: 1;
             }
 
+            main-component {
+                margin-bottom: 30px;
+            }
+
             @media (max-width: 564px) {
                 header-component,
                 main-component {
@@ -52,6 +57,9 @@ export class RootComponent extends LitElement {
                 header-component {
                     margin: 0 0 20px;
                 }
+            }
+
+            @media (min-width: 564px) {
                 main-component {
                     align-items: center;
                 }

@@ -1,6 +1,7 @@
 import { LitElement, html, TemplateResult, CSSResult, css, customElement, property } from 'lit-element';
-import '../components/tab-component';
-import '../components/tablist-component';
+import '../components/route-view';
+import '../components/tabs/tab-component';
+import '../components/tabs/tablist-component';
 import '../pages/about-component';
 import '../pages/skills-component';
 import '../pages/experience-component';
@@ -36,6 +37,10 @@ export class MainComponent extends LitElement {
         document.removeEventListener('keydown', this.keysListener);
     }
 
+    renderRouteView(tab: TAB, view: TemplateResult): TemplateResult | '' {
+        return this.isActiveTab(tab) ? view : '';
+    }
+
     protected render(): TemplateResult {
         return html`
             <tablist-component @tab-change="${({ detail }: CustomEvent<string>) => this.changeTab(detail)}">
@@ -46,12 +51,28 @@ export class MainComponent extends LitElement {
                 </tab-component>
             </tablist-component>
             <div class="content">
-                ${this.isActiveTab(TAB.about) ? html`<about-component></about-component>` : ''}
-                ${this.isActiveTab(TAB.skills) ? html`<skills-component></skills-component>` : ''}
-                ${this.isActiveTab(TAB.experience) ? html`<experience-component></experience-component>` : ''}
+                ${this.renderRouteView(TAB.about, this.aboutTemplate)}
+                ${this.renderRouteView(TAB.skills, this.skillsTemplate)}
+                ${this.renderRouteView(TAB.experience, this.experienceTemplate)}
             </div>
             ${this.showHelp ? this.renderHelp() : ''}
         `;
+    }
+
+    get aboutTemplate(): TemplateResult {
+        return html`<route-view>
+            <about-component></about-component>
+        </route-view>`;
+    }
+    get skillsTemplate(): TemplateResult {
+        return html`<route-view>
+            <skills-component></skills-component>
+        </route-view>`;
+    }
+    get experienceTemplate(): TemplateResult {
+        return html`<route-view>
+            <experience-component></experience-component>
+        </route-view>`;
     }
 
     renderHelp(): TemplateResult {
@@ -83,11 +104,11 @@ export class MainComponent extends LitElement {
             .content {
                 padding: 10px 0;
                 font-size: 18px;
+                margin: 0 40px;
             }
 
             .help {
                 display: flex;
-                justify-content: center;
                 color: var(--base);
                 animation: ease show 300ms;
             }

@@ -2,8 +2,8 @@ html,
 body {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -15,16 +15,20 @@ body {
 
     --dark-0: hsl(0, 0%, 0%);
     --dark-20: hsl(0, 0%, 20%);
+    --dark-40: hsl(0, 0%, 40%);
+    --dark-60: hsl(0, 0%, 40%);
     --base: hsl(0, 0%, 60%);
     --light-80: hsl(0, 0%, 80%);
     --light-100: hsl(0, 0%, 100%);
     --ocean-base: hsl(235, 75%, 60%);
 
     --primary: var(--dark-20);
+    --secondary: var(--dark-40);
     --background: var(--light-100);
     --accent: var(--ocean-base);
 }
 :root.dark {
     --primary: var(--light-80);
     --background: var(--dark-0);
+    --secondary: var(--dark-60);
 }

@@ -1,16 +1,40 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
-import { animations } from '../components/animations-style';
 import { listStyle } from '../components/list-style';
+import { typographyStyle } from '../components/typography-style';
 
 @customElement('experience-component')
 export class ExperienceComponent extends LitElement {
     protected render(): TemplateResult {
         return html`
             <ul>
-                <li>Instinctools 2011 - 2014: Java Developer</li>
-                <li>Instinctools 2014 - 2015: Frontend Developer</li>
-                <li>Sam Solutions 2016 - 2017: Frontend Developer</li>
-                <li>Razor Theory Projects 2017 - now: Frontend Developer</li>
+                <li>
+                    <div class="control">
+                        <label>Instinctools</label>
+                        <div class="position">Java Developer</div>
+                        <div>2011 - 2014</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="control">
+                        <label>Instinctools</label>
+                        <div class="position">Frontend Developer</div>
+                        <div>2014 - 2015</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="control">
+                        <label>Sam Solutions</label>
+                        <div class="position">Frontend Developer</div>
+                        <div>2016 - 2017</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="control">
+                        <label>Razor Theory Projects</label>
+                        <div class="position">Frontend Developer</div>
+                        <div>2017 - now</div>
+                    </div>
+                </li>
             </ul>
         `;
     }
@@ -21,17 +45,14 @@ export class ExperienceComponent extends LitElement {
             css`
                 :host {
                     display: flex;
-                    align-items: center;
-                    flex-flow: column;
-                    animation: show ease 300ms;
                 }
-
-                .total {
-                    margin-bottom: 5px;
+                .position {
+                    margin-right: 5px;
+                    font-weight: bold;
                 }
             `,
-            animations,
             listStyle,
+            typographyStyle,
         ];
     }
 }

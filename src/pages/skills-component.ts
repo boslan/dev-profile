@@ -1,5 +1,4 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
-import { animations } from '../components/animations-style';
 import { listStyle } from '../components/list-style';
 
 @customElement('skills-component')
@@ -21,11 +20,11 @@ export class SkillsComponent extends LitElement {
                 <ul>
                     <li>AngularJS/Angular</li>
                     <li>LitElement</li>
-                    <li>Polymer</li>
                     <li>React</li>
+                    <li>Polymer</li>
+                    <li>Aurelia</li>
                     <li>Redux</li>
                     <li>RxJS</li>
-                    <li>Aurelia</li>
                 </ul>
             </article>
         `;
@@ -38,14 +37,11 @@ export class SkillsComponent extends LitElement {
                 :host {
                     display: flex;
                     flex-wrap: wrap;
-                    justify-content: center;
-                    animation: show ease 300ms;
                 }
                 article {
                     margin: 0 5px;
                 }
             `,
-            animations,
             listStyle,
         ];
     }

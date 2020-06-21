@@ -46,6 +46,7 @@ export class HeaderComponent extends LitElement {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                flex-basis: 100%;
             }
 
             .about {

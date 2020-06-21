@@ -1,12 +1,20 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
-import { animations } from '../components/animations-style';
+import { typographyStyle } from '../components/typography-style';
 
 @customElement('about-component')
 export class AboutComponent extends LitElement {
     protected render(): TemplateResult {
         return html`
-            <div>Current location: Minsk</div>
-            <div>Born: 1992</div>
+            <div>
+                <div class="control">
+                    <label for="location">Current location</label>
+                    <span id="location" class="text">Minsk</span>
+                </div>
+                <div class="control">
+                    <label for="born">Born</label>
+                    <span id="born" class="text">1992</span>
+                </div>
+            </div>
         `;
     }
 
@@ -16,12 +24,9 @@ export class AboutComponent extends LitElement {
             css`
                 :host {
                     display: flex;
-                    flex-flow: column;
-                    align-items: center;
-                    animation: show ease 300ms;
                 }
             `,
-            animations,
+            typographyStyle,
         ];
     }
 }
