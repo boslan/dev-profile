@@ -102,9 +102,8 @@ export class MainComponent extends LitElement {
             }
 
             .content {
-                padding: 10px 0;
                 font-size: 18px;
-                margin: 0 40px;
+                margin: 15px 0;
             }
 
             .help {

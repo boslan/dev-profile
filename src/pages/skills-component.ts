@@ -1,5 +1,6 @@
 import { css, CSSResultArray, customElement, html, LitElement, TemplateResult } from 'lit-element';
 import { listStyle } from '../components/list-style';
+import { layoutStyle } from '../components/layout-style';
 
 @customElement('skills-component')
 export class SkillsComponent extends LitElement {
@@ -33,16 +34,14 @@ export class SkillsComponent extends LitElement {
     static get styles(): CSSResultArray {
         // language=CSS
         return [
+            listStyle,
+            layoutStyle,
             css`
                 :host {
                     display: flex;
                     flex-wrap: wrap;
                 }
-                article {
-                    margin: 0 5px;
-                }
             `,
-            listStyle,
         ];
     }
 }
